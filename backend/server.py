@@ -35,7 +35,7 @@ database = client["ListingsDatabase"]["ListingsCollection"]
 ###################
 @api.route("/api/getListings", methods=["GET"])
 def get_listings():
-    listings = database.find_one()
+    listings = database.find()
     listingsJSON = dumps(listings)
 
     # Return database entries
