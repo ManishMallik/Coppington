@@ -1,18 +1,22 @@
+import os
+from dotenv import load_dotenv
 from flask import Flask
 from flask_cors import CORS
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from bson.json_util import dumps
 
+
 ###################
 # API Setup
 ###################
+load_dotenv()
 # Set up Flask API
 api = Flask(__name__)
 CORS(api)
 
 # Set up MongoDB connection
-uri = "mongodb+srv://admin:CuPeBtnHjDuUGchX@coppingtoncluster.7xxwfc0.mongodb.net/?retryWrites=true&w=majority"
+uri = os.getenv("MONGO_CONNECTION_URI")
 client = MongoClient(uri, server_api=ServerApi("1"))
 
 # Send a ping to confirm a successful connection
