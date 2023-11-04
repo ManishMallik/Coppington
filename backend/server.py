@@ -10,8 +10,8 @@ from bson.json_util import dumps
 ###################
 # API Setup
 ###################
-load_dotenv()
 # Set up Flask API
+load_dotenv()
 api = Flask(__name__)
 CORS(api)
 
@@ -26,7 +26,7 @@ try:
 except Exception as e:
     print(e)
 
-# Set database
+# Set database and collection
 database = client["ListingsDatabase"]["ListingsCollection"]
 
 
@@ -36,10 +36,7 @@ database = client["ListingsDatabase"]["ListingsCollection"]
 @api.route("/api/getListings", methods=["GET"])
 def get_listings():
     listings = database.find_one()
-    print(listings)
-
     listingsJSON = dumps(listings)
-    print(listingsJSON)
 
     # Return database entries
     response_body = listingsJSON
