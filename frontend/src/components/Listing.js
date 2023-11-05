@@ -8,14 +8,12 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const defaultTheme = createTheme();
 export default function Listing() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <>
       <CssBaseline />
       <main>
         <Container sx={{ py: 8 }}>
@@ -53,6 +51,6 @@ export default function Listing() {
           </Grid>
         </Container>
       </main>
-    </ThemeProvider>
+      </>
   );
 }
