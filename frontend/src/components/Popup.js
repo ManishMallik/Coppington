@@ -67,13 +67,16 @@ function Popup({ listing, onClose }) {
                         <div className="token-info">
                             <div className="stats">
                                 <div className="stat">
-                                    <p>Available Tokens: {availableTokens}</p>
+                                    <p>Available Tokens: {listing.tokensAvailable}</p>
                                 </div>
                                 <div className="stat">
-                                    <p>Total Tokens: {totalTokens}</p>
+                                    <p>Total Tokens: {listing.totalTokens.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                                 </div>
                                 <div className="stat">
-                                    <p>Price per Token: ${pricePerToken}</p>
+                                    <p>Price per Token: ${listing.price / listing.totalTokens}</p>
+                                </div>
+                                <div className="stat">
+                                    <p>Predicted APY: {listing.predictedAPY}%</p>
                                 </div>
                             </div>
                             <div className="investment-input">
@@ -98,8 +101,8 @@ function Popup({ listing, onClose }) {
                                 <Typography variant="h4">
                                     Investment Score:&ensp;
                                 </Typography>
-                                <Typography variant="h4" color={calculateColorHex((Math.random() * 100).toFixed(1))}>
-                                    {(Math.random() * 100).toFixed(1)}
+                                <Typography variant="h4" color={calculateColorHex((listing.score).toFixed(1))}>
+                                    {(listing.score).toFixed(1)}
                                 </Typography>
                             </div>
                             <div className="house-description">

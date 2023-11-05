@@ -81,8 +81,8 @@ export default function Listing() {
                 <Typography>
                     {listings.bedrooms} Beds | {listings.bathrooms} Baths | {listings.sqft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Square Feet
                 </Typography>
-                <Typography variant="h4" color={calculateColorHex((Math.random() * 100).toFixed(1))}>
-                    {(Math.random() * 100).toFixed(1)}
+                <Typography variant="h4" color={calculateColorHex((listings.score).toFixed(1))}>
+                    {listings.score}
                 </Typography>
                 </CardContent>
                 {/* <CardActions>
