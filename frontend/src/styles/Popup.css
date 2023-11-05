@@ -1,0 +1,52 @@
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 90%;
+    width: 1200px;
+    height: 700px;
+    display: flex; /* Make the content and images side by side */
+    justify-content: space-between; /* Separate the content and images */
+  }
+  
+  .close-button {
+    cursor: pointer;
+    background: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .images-container {
+    display: flex;
+    justify-content: space-between; /* Arrange images side by side */
+    width: 100%;
+    height: 50%;
+  }
+  
+  .image {
+    width: 49%; /* Adjust the width as needed to fit two images side by side */
+    border-radius: 5px;
+  }
+  
+  .popup-content {
+    flex: 1; /* Allow the content to take remaining space */
+  }
+  
