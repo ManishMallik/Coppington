@@ -11,3 +11,7 @@ npm start
 pip install -r requirements.txt
 
 python server.py
+
+## Citations
+
+- Kaggle for the ML model
