@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Popup.css';
+import Typography from '@mui/material/Typography';
+import Slider from '@mui/material/Slider';
 
 function calculateColorHex(value) {
     // Ensure the value is within the 0-100 range
@@ -39,40 +41,74 @@ function Popup({ listing, onClose }) {
                     <img className="image" src="https://source.unsplash.com/random?landscape" alt="Property Image 2" />
                     <img className="image" src="https://source.unsplash.com/random?landscape" alt="Property Image 2" />
                 </div>
-                <h1>{listing.address}</h1>
-                <h2>${listing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
-                <h3>
-                    <span className="big-bold">
-                        <strong>{listing.bedrooms}</strong> </span>
-                    <span className="small-thin"> {"Bedrooms"}</span>
+                <div className="listing-info">
+                    <div className="listing-title">
+                        <div className="address-container">
+                            <h1>{listing.address}</h1>
+                            <h2>${listing.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</h2>
+                        </div>
+                        <div className="bedroom-container">
+                            <h3>
+                                <span className="big-bold">
+                                    <strong>{listing.bedrooms}</strong> </span>
+                                <span className="small-thin"> {"Bedrooms"}</span>
 
-                    <span className="big-bold">
-                        <strong>{listing.bathrooms}</strong> </span>
-                    <span className="small-thin"> Bathrooms </span>
+                                <span className="big-bold">
+                                    <strong>{listing.bathrooms}</strong> </span>
+                                <span className="small-thin"> Bathrooms </span>
 
-                    <span className="big-bold">
-                        <strong>{listing.sqft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> </span>
-                    <span className="small-thin"> Square Feet</span>
-                </h3>
-                <div className="stats">
-                    <div className="stat">
-                        <p>Available Tokens: {availableTokens}</p>
+                                <span className="big-bold">
+                                    <strong>{listing.sqft.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong> </span>
+                                <span className="small-thin"> Square Feet</span>
+                            </h3>
+                        </div>
                     </div>
-                    <div className="stat">
-                        <p>Total Tokens: {totalTokens}</p>
+                    <div className="bottom-info">
+                        <div className="token-info">
+                            <div className="stats">
+                                <div className="stat">
+                                    <p>Available Tokens: {availableTokens}</p>
+                                </div>
+                                <div className="stat">
+                                    <p>Total Tokens: {totalTokens}</p>
+                                </div>
+                                <div className="stat">
+                                    <p>Price per Token: ${pricePerToken}</p>
+                                </div>
+                            </div>
+                            <div className="investment-input">
+                                <label htmlFor="tokensToInvest">Tokens to Invest:</label>
+                                <div className="slider-box">
+                                    <Slider defaultValue={10} aria-label="Default" valueLabelDisplay="auto" />
+                                </div>
+                                
+                                {/* <input
+                                    type="number"
+                                    id="tokensToInvest"
+                                    value={tokensToInvest}
+                                    onChange={(e) => setTokensToInvest(e.target.value)}
+                                /> */}
+                                <button className="invest-button" onClick={null}>
+                                    {'Invest'}
+                                </button>
+                            </div>  
+                        </div>
+                        <div className="combined-box">
+                            <div className="investment-score">
+                                <Typography variant="h4">
+                                    Investment Score:&ensp;
+                                </Typography>
+                                <Typography variant="h4" color={calculateColorHex((Math.random() * 100).toFixed(1))}>
+                                    {(Math.random() * 100).toFixed(1)}
+                                </Typography>
+                            </div>
+                            <div className="house-description">
+                                {listing.description}
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div className="stat">
-                        <p>Price per Token: ${pricePerToken}</p>
-                    </div>
-                </div>
-                <div className="investment-input">
-                    <label htmlFor="tokensToInvest">Tokens to Invest:</label>
-                    <input
-                        type="number"
-                        id="tokensToInvest"
-                        value={tokensToInvest}
-                        onChange={(e) => setTokensToInvest(e.target.value)}
-                    />
+                    
                 </div>
             </div>
         </div>
