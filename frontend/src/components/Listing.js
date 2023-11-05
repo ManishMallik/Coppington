@@ -8,6 +8,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import house0a from '../assets/house0a.webp'
+import house1a from '../assets/house1a.webp'
+import house2a from '../assets/house2a.webp'
+import house3a from '../assets/house3a.webp'
+import house4a from '../assets/house4a.webp'
+import house5a from '../assets/house5a.webp'
+
+
+const house0array = [house0a, house1a, house2a, house3a, house4a, house5a]
 
 function calculateColorHex(value) {
     // Ensure the value is within the 0-100 range
@@ -74,12 +83,12 @@ export default function Listing() {
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: 'white', boxShadow: 10 }}
             >
                 <CardMedia
-                component="div"
-                sx={{
-                    // 16:9
-                    pt: '56.25%',
-                }}
-                image="https://source.unsplash.com/random?wallpapers"
+                    component="div"
+                    sx={{
+                        // 16:9
+                        pt: '56.25%',
+                    }}
+                    image={house0array[listings.id]}
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                 <Typography gutterBottom variant="h5" component="h2">

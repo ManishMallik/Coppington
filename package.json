@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@circle-fin/circle-sdk": "^2.6.1",
+    "@types/uuid": "^9.0.6",
+    "wagmi": "^1.4.5"
+  }
+}

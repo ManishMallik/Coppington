@@ -3,6 +3,31 @@ import '../styles/Popup.css';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 
+import house0a from '../assets/house0a.webp'
+import house1a from '../assets/house1a.webp'
+import house2a from '../assets/house2a.webp'
+import house3a from '../assets/house3a.webp'
+import house4a from '../assets/house4a.webp'
+import house5a from '../assets/house5a.webp'
+
+import house0b from '../assets/house0b.webp'
+import house1b from '../assets/house1b.webp'
+import house2b from '../assets/house2b.webp'
+import house3b from '../assets/house3b.webp'
+import house4b from '../assets/house4b.webp'
+import house5b from '../assets/house5b.webp'
+
+import house0c from '../assets/house0c.webp'
+import house1c from '../assets/house1c.webp'
+import house2c from '../assets/house2c.webp'
+import house3c from '../assets/house3c.webp'
+import house4c from '../assets/house4c.webp'
+import house5c from '../assets/house5c.webp'
+
+const house0array = [house0a, house1a, house2a, house3a, house4a, house5a]
+const house1array = [house0b, house1b, house2b, house3b, house4b, house5b]
+const house2array = [house0c, house1c, house2c, house3c, house4c, house5c]
+
 function calculateColorHex(value) {
     // Ensure the value is within the 0-100 range
     value = Math.min(100, Math.max(0, value));
@@ -37,9 +62,9 @@ function Popup({ listing, onClose }) {
                     {'< Back to Listings'}
                 </button>
                 <div className="images-container">
-                    <img className="image" src="https://source.unsplash.com/random?wallpapers" alt="Property Image 1" />
-                    <img className="image" src="https://source.unsplash.com/random?landscape" alt="Property Image 2" />
-                    <img className="image" src="https://source.unsplash.com/random?landscape" alt="Property Image 2" />
+                    <img className="image" src={house0array[listing.id]} alt="Property Image 1" />
+                    <img className="image" src={house1array[listing.id]} alt="Property Image 2" />
+                    <img className="image" src={house2array[listing.id]} alt="Property Image 2" />
                 </div>
                 <div className="listing-info">
                     <div className="listing-title">

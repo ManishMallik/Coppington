@@ -18,7 +18,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     max-width: 90%;
-    width: 1200px;
+    width: 1300px;
     height: 825px;
     display: flex; /* Make the content and images side by side */
     justify-content: space-between; /* Separate the content and images */
