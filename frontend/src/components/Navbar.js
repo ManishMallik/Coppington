@@ -8,9 +8,12 @@ const Navbar = () => {
           <a href="/">Coppington</a>
         </div>
         <ul>
-          {/* <li>
-            <Link to="/Join" className={currentPath === '/Join' ? 'active' : ''}>Join</Link>
-          </li> */}
+          <li>
+            <a href="/" className=''>Top Picks</a>
+          </li>
+          <li>
+            <a href="/" className=''>Listings</a>
+          </li>
         </ul>
       </div>
     </nav>
