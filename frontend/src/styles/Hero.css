@@ -53,7 +53,7 @@
     background: var(--gold);
   }
   .bg {
-    background-image: url(''); /* Replace 'path/to/your-image.jpg' with the actual path to your image file. */
+    background-image: url('../../public/home-background2.png'); /* Replace 'path/to/your-image.jpg' with the actual path to your image file. */
     background-size: cover; /* Adjust the size properties as needed. */
     background-position: center;
     width: 100%;
@@ -62,4 +62,9 @@
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: .5;
+  }
+
+  .hero-container {
+    margin-bottom: 75px;
   }

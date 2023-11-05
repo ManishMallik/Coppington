@@ -36,7 +36,17 @@ export default function Listing() {
 
     const getListings = async () => {
         const response = await fetch("http://localhost:8000/api/getListings")
-        setList(await response.json())
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Something went wrong');
+            }).then((responseJSON) => {
+                setList(responseJSON)
+            }).catch((error) => {
+                console.log(error)
+            });
+        // setList(await response.json())
     }
 
     useEffect(() => {
