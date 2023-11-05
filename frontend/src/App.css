@@ -2,6 +2,7 @@
 :root {
     --black: #222222;
     --white: #ffffff;
+    --gold: #cbb682;
 }
 *{
     margin: 0;
@@ -10,6 +11,6 @@
     font-family: 'Poppins', sans-serif;
 }
 ::selection{
-    color: var(--black);
-    background: var(--white);
+    color: var(--white);
+    background: var(--gold);
 }
