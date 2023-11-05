@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -10,17 +10,18 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-const listings = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 export default function Listing() {
+    const [list, setList] = useState([]);
+
+    const getListings = async () => {
+        const response = await fetch("http://localhost:8000/api/getListings")
+        setList(await response.json())
+    }
+
     useEffect(() => {
-        fetch("http://localhost:8000/api/getListings").then(
-          response => response.text()
-        ).then(
-          data => {
-            console.log(data)
-          }
-        )
+        getListings()
     }, [])
 
     return (
@@ -29,8 +30,8 @@ export default function Listing() {
         <main>
         <Container sx={{ py: 8 }}>
         <Grid container spacing={4}>
-        {listings.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
+        {list.map((listings) => (
+            <Grid item key={listings.id} xs={12} sm={6} md={4}>
             <Card
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
             >
@@ -44,11 +45,10 @@ export default function Listing() {
                 />
                 <CardContent sx={{ flexGrow: 1 }}>
                 <Typography gutterBottom variant="h5" component="h2">
-                    Heading
+                    {listings.address}
                 </Typography>
                 <Typography>
-                    This is a media card. You can use this section to describe the
-                    content.
+                    {listings.description}
                 </Typography>
                 </CardContent>
                 <CardActions>
