@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b2eb1ba6.css",
+    "main.js": "/static/js/main.3e2d1486.js",
+    "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
+    "static/media/home-background2.png": "/static/media/home-background2.5a16fd0140bec08f4837.png",
+    "static/media/sir-floppington.png": "/static/media/sir-floppington.bc46963e03ff406521b5.png",
+    "index.html": "/index.html",
+    "main.b2eb1ba6.css.map": "/static/css/main.b2eb1ba6.css.map",
+    "main.3e2d1486.js.map": "/static/js/main.3e2d1486.js.map",
+    "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2eb1ba6.css",
+    "static/js/main.3e2d1486.js"
+  ]
+}
