@@ -4,7 +4,8 @@ import '../styles/Hero.css';
 const Hero = () => {
   return (
         <>
-          <div className="bg"></div>
+          <div className="bg">
+          </div>
           <div className="center">
             <div className="title">Unlocking Real Estate</div>
             <div className="subtitle">We Leverage Blockchain Technology to Reduce the Financial and Educational Barriers into Real Estate Investments</div>
