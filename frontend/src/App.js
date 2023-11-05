@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import Navbar from './components/Navbar';
 import Listing from './components/Listing';
+import Hero from './components/Hero';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
@@ -30,6 +31,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Typography component="div">
       <Navbar />
+      <Hero />
       <Listing />
       </Typography>
     </ThemeProvider>

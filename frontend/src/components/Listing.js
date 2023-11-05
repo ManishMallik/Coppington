@@ -45,9 +45,10 @@ export default function Listing() {
         getListings()
     }, [])
 
-    const handleCardClick = (listing) => {
+    const handleCardClick = (listing, e) => {
+        e.stopPropagation();
         setSelectedListing(listing);
-      }
+      };
     
       const closePopup = () => {
         setSelectedListing(null);
@@ -61,7 +62,7 @@ export default function Listing() {
         <Grid container spacing={4}>
         {list.map((listings) => (
             <Grid item key={listings.id} xs={12} sm={6} md={4}>
-            <Card onClick={() => handleCardClick(listings)}
+            <Card onClick={(e) => handleCardClick(listings, e)}
                 sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: 'white', boxShadow: 10 }}
             >
                 <CardMedia
@@ -97,8 +98,8 @@ export default function Listing() {
         </Container>
         </main>
         {selectedListing && (
-        <div className="popup-container" onClick={closePopup}>
-          <Popup listing={selectedListing} onClose={closePopup} />
+        <div className="popup-container">
+            <Popup listing={selectedListing} onClose={closePopup} />
         </div>
       )}
     </>

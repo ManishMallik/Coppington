@@ -1,0 +1,54 @@
+.center{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 0 20px;
+    text-align: center;
+    margin-top: 45vh;
+  }
+  .center .title{
+    color: var(--gold);
+    font-size: 70px;
+    font-weight: 600;
+  }
+  .center .subtitle{
+    color: var(--black);
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 10px;
+  }
+  .center .btns{
+    margin-top: 20px;
+  }
+  .center .btns button{
+    height: 55px;
+    width: 170px;
+    border-radius: 30px;
+    border: solid 2px transparent;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .center .btns .left-button{
+    background: var(--gold);
+    color: var(--black);
+  }
+  .center .btns .left-button:hover{
+    border-color: var(--black);
+    background: none;
+  }
+  .center .btns .right-button{
+    color: var(--black);
+    background: none;
+    border-color: black;
+  }
+  .btns .right-button:hover{
+    border-color: var(--gold);
+    background: var(--gold);
+  }

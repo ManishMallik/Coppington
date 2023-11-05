@@ -26,9 +26,10 @@
   
   .close-button {
     cursor: pointer;
-    background: #ff6666;
-    color: white;
+    background: var(--gold);
+    color: var(--black);
     border: none;
+    border-radius: 5px;
     padding: 10px 20px;
     margin-top: 10px;
     font-size: 16px;
@@ -39,10 +40,12 @@
     justify-content: space-between; /* Arrange images side by side */
     width: 100%;
     height: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
   
   .image {
-    width: 49%; /* Adjust the width as needed to fit two images side by side */
+    width: 32%; /* Adjust the width as needed to fit two images side by side */
     border-radius: 5px;
   }
   
@@ -50,3 +53,20 @@
     flex: 1; /* Allow the content to take remaining space */
   }
   
+  .big-bold {
+    font-size: 22px; /* Adjust the size as needed */
+    font-weight: bold;
+    display: inline; /* Display horizontally */
+    padding-left: 40px;
+  }
+  
+  .small-thin {
+    font-size: 20px; /* Adjust the size as needed */
+    font-weight: normal;
+    display: inline; /* Display horizontally */
+  }
+
+  .number {
+    margin-top: 7px;
+  }
+
