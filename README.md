@@ -1,10 +1,10 @@
 # Coppington
 
-## Vite Frontend
+## Frontend
 
 npm install
 
-npm run dev
+npm start
 
 ## Flask Backend
 
