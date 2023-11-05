@@ -14,3 +14,46 @@
     color: var(--white);
     background: var(--gold);
 }
+
+.circle {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: #CBB682;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 20px;
+    position: fixed;
+    box-shadow: 0 0 50px #222;
+    /* padding: 20px; */
+}
+  
+.rightside {
+    bottom: 90px;
+    right: 30px;
+    position: fixed;
+}
+  
+.floppington {
+    width: 65px;
+    height: 65px;
+    padding-left: 7px;
+ }
+  
+.floppington-avatar {
+    width: 60px;
+    height: 60px;
+}
+  
+.text {
+    margin: auto;
+}
+  
+.chatbot-btn {
+    background-color: #253d5b;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+}
