@@ -35,7 +35,7 @@ export default function Listing() {
     const [selectedListing, setSelectedListing] = useState(null);
 
     const getListings = async () => {
-        const response = await fetch("http://localhost:8000/api/getListings")
+        await fetch("http://localhost:8000/api/getListings")
             .then((response) => {
                 if (response.ok) {
                     return response.json();

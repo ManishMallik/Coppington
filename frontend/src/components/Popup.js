@@ -73,7 +73,7 @@ function Popup({ listing, onClose }) {
                                     <p>Total Tokens: {listing.totalTokens.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                                 </div>
                                 <div className="stat">
-                                    <p>Price per Token: ${listing.price / listing.totalTokens}</p>
+                                    <p>Price per Token: ${(listing.price / listing.totalTokens).toFixed(2)}</p>
                                 </div>
                                 <div className="stat">
                                     <p>Predicted APY: {listing.predictedAPY}%</p>

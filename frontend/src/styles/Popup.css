@@ -19,7 +19,7 @@
     padding: 20px;
     max-width: 90%;
     width: 1200px;
-    height: 800px;
+    height: 825px;
     display: flex; /* Make the content and images side by side */
     justify-content: space-between; /* Separate the content and images */
   }

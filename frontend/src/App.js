@@ -13,6 +13,25 @@ import MessageParser from './chatbot/MessageParser';
 import ActionProvider from './chatbot/ActionProvider'
 import Chatbot from 'react-chatbot-kit'
 
+// import { WagmiConfig, createConfig, configureChains } from 'wagmi';
+// import { goerli } from '@wagmi/core/chains';
+// import { publicProvider } from 'wagmi/providers/public'
+// import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
+
+// const { chains, publicClient, webSocketPublicClient } = configureChains(
+//   [goerli]
+//   [publicProvider()],
+// )
+
+// createConfig({
+//   autoConnect: true,
+//   connectors: [
+//     new MetaMaskConnector({ chains }),
+//   ],
+//   publicClient,
+//   webSocketPublicClient,
+// })
+
 const theme = createTheme({
   typography: {
     fontFamily: ["Poppins"],
